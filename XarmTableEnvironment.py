@@ -269,9 +269,9 @@ if __name__ == "__main__":
         max_episode_steps=1000,
     )
     env = gym.make("XarmTable-v0", render_mode="human", control_option="ee_pos")
-    print(env.action_space)
 
     while True:
         obs = env.reset()
+        print(obs)
         for _ in range(100000):
             obs, _, end1, end2, _ = env.step(env.action_space.sample())
